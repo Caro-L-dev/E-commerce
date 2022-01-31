@@ -5,3 +5,6 @@
 ## Run the app
 
 `yarn start`
+
+---
+`yarn add styled-components`
