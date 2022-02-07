@@ -8,7 +8,7 @@
 
 ## Install dependencies
 
-`yarn add styled-components`
+`yarn add styled-components`  
 `yarn add @material-ui/core @material-ui/icons`
 
 
