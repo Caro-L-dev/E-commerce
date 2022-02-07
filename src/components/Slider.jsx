@@ -1,5 +1,7 @@
 import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import styled from "styled-components";
+import { useState } from "react";
+import { sliderItems } from "../data";
 
 const Container = styled.div`
   width: 100%;
@@ -76,37 +78,28 @@ const Button = styled.button`
 `;
 
 const Slider = () => {
-
+  const [slideIndex, setSlideIndex] = useState(0);
   const handleClick = (direction) => {
-
   };
-
   return (
     <Container>
       <Arrow direction="left" onClick={()=> handleClick("left")}>
         <ArrowLeftOutlined />
       </Arrow>
       <Wrapper>
-        <Slide bg="f5fafd">
-          <ImgContainer>
-            <Image src="https://cdn.discordapp.com/attachments/649972924291219457/857001548764282930/01_TAG_Merry.png" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>SUMMER SALES!</Title>
-            <Description>Lorem, ipsum dolor.</Description>
-            <Button>SHOW NOW</Button>
-          </InfoContainer>
-        </Slide>
-        <Slide bg="blue">
-          <ImgContainer>
-            <Image src="https://cdn.discordapp.com/attachments/649972924291219457/857001548764282930/01_TAG_Merry.png" />
-          </ImgContainer>
-          <InfoContainer>
-            <Title>Winter SALES!</Title>
-            <Description>Lorem ipsum dolor sit amet.</Description>
-            <Button>SHOW NOW</Button>
-          </InfoContainer>
-        </Slide>
+        {sliderItems.map(item=>(
+          <Slide bg={item.bg}>
+            <ImgContainer>
+              <Image src={item.img}/>
+            </ImgContainer>
+            <InfoContainer>
+              <Title>{item.title}</Title>
+              <Description>{item.description}</Description>
+              <Button>{item.button}</Button>
+            </InfoContainer>
+
+          </Slide>
+        ))}
       </Wrapper>
       <Arrow direction="right" onClick={()=> handleClick("right")}>
         <ArrowRightOutlined />
