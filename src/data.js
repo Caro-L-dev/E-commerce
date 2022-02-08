@@ -42,3 +42,38 @@ export const categories = [
         title: "LIGHT PANTS",
     },
 ];
+
+export const popularProducts = [
+    {
+        id: 1,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 2,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 3,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 4,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 5,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 6,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 7,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+    {
+        id: 8,
+        img:"https://www.pngmart.com/files/17/Abstract-Triangle-Transparent-PNG.png"
+    },
+];
