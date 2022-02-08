@@ -1,12 +1,11 @@
 import { Send } from '@material-ui/icons';
 import styled from 'styled-components';
+import { secondaryColorBgLight, flexAllCenter, mainColorBg, mainColorTextLight } from '../styles/mixins';
 
 const Container = styled.div`
     height: 60vh;
-    background-color: #fcf5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    ${secondaryColorBgLight};
+    ${flexAllCenter};
     flex-direction: column;
 `;
 
@@ -24,7 +23,7 @@ const Description = styled.div`
 const InputContainer = styled.div`
     width: 50%;
     height: 3.5rem;
-    background-color: white;
+    ${secondaryColorBgLight};
     display: flex;
     justify-content: space-between;
     border: 0.06rem solid lightgray;
@@ -40,8 +39,8 @@ const Input = styled.input`
 const Button = styled.button`
     flex: 1;
     border: none;
-    background-color: teal;
-    color: white;
+    ${mainColorBg};
+    ${mainColorTextLight};
 `;
 
 const Newsletter = () => {

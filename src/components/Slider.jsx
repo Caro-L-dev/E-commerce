@@ -2,6 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { useState } from "react";
 import { sliderItems } from "../data";
+import { secondaryColorBgLight, flexAllCenter} from "../styles/mixins";
 
 const Container = styled.div`
   width: 100%;
@@ -14,11 +15,9 @@ const Container = styled.div`
 const Arrow = styled.div`
   width: 3rem;
   height: 3rem;
-  background-color: #f0efef;
+  ${secondaryColorBgLight};
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flexAllCenter};
   position: absolute;
   top: 0;
   left: ${props => props.direction === "left" && "1rem"};
@@ -42,7 +41,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #${props=>props.bg};
+  background-color: #${props=>props.bgSlider};
 `;
 
 const ImgContainer = styled.div`
@@ -95,7 +94,7 @@ const Slider = () => {
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
         {sliderItems.map(item=>(
-          <Slide bg={item.bg} key={item.id}>
+          <Slide bgSlider={item.bgSlider} key={item.id}>
             <ImgContainer>
               <Image src={item.img}/>
             </ImgContainer>

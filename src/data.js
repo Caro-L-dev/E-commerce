@@ -5,7 +5,7 @@ export const sliderItems = [
         title: "SUMMER SALE",
         description: "Lorem ipsum delalia fohjop moinhu",
         button: "SHOW NOW",
-        bg: "f5fafd",
+        bgSlider: "f5fafd",
     },
     {
         id: 2,
@@ -13,7 +13,7 @@ export const sliderItems = [
         title: "WINTER SALE",
         description: "Lorem ipsum delalia fohjop moinhu",
         button: "SHOW NOW",
-        bg: "f5fafd",
+        bgSlider: "f5fafd",
     },
     {
         id: 3,
@@ -21,7 +21,7 @@ export const sliderItems = [
         title: "AUTOMN SALE",
         description: "Lorem ipsum delalia fohjop moinhu",
         button: "SHOW NOW",
-        bg: "f5fafd",
+        bgSlider: "f5fafd",
     },
 ];
 

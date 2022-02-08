@@ -1,5 +1,6 @@
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
 import styled from 'styled-components';
+import { flexAllCenter, colorBgContainerProductItem, colorBgTransparentDark, colorBgLight } from '../styles/mixins';
 
 const Info = styled.div`
   opacity: 0;
@@ -8,11 +9,9 @@ const Info = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  ${colorBgTransparentDark};
   z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${flexAllCenter};
   transition: all 0.5s ease;
   cursor: pointer;
 `;
@@ -22,10 +21,8 @@ const Container = styled.div`
   margin: 0.3rem;
   min-width: 17.5rem;
   height: 21.875rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f5fbfd;
+  ${flexAllCenter};
+  ${colorBgContainerProductItem};
   position: relative;
 
   &:hover ${Info}{
@@ -38,7 +35,7 @@ const Circle = styled.div`
   width: 12.5rem;
   height: 12.5rem;
   border-radius: 50%;
-  background-color: white;
+  ${colorBgLight};
   position: absolute;
 `;
 
@@ -51,10 +48,8 @@ const Icon = styled.div`
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background-color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  ${colorBgLight};
+  ${flexAllCenter};
   margin: 0.6rem;
   transition: all 0.5s ease;
 

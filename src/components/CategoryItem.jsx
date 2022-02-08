@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { image, mainColorTextLight, secondaryColorBgLight, secondaryColorTextMid } from "../styles/mixins";
 
 const Container = styled.div`
     flex:1;
@@ -8,9 +9,7 @@ const Container = styled.div`
 `;
 
 const Image = styled.img`
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    ${image};
 `;
 
 const Info = styled.div`
@@ -26,15 +25,15 @@ const Info = styled.div`
 `;
 
 const Title = styled.h1`
-    color: white;
+    ${mainColorTextLight};
     margin-bottom: 2rem;
 `;
 
 const Btn = styled.button`
     border: none;
     padding: 1rem;
-    background-color: white;
-    color: gray;
+    ${secondaryColorBgLight};
+    ${secondaryColorTextMid};
     cursor: pointer;
     font-weight: 600;
 `;

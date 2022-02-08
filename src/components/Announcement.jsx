@@ -1,13 +1,12 @@
 import styled from "styled-components";
+import { mainColorBg, mainColorTextLight, flexAllCenter } from "../styles/mixins";
 
 const Container = styled.div`
   height: 3rem; 
-  background-color: teal; 
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.8rem;
+  ${mainColorBg}; 
+  ${mainColorTextLight};
+  ${flexAllCenter};
+  font-size: 1rem;
   font-weight: 500;
 `;
 
