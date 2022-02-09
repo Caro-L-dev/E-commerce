@@ -7,6 +7,7 @@ const Container = styled.div`
     ${secondaryColorBgLight};
     ${flexAllCenter};
     flex-direction: column;
+    padding: 5vh;
 `;
 
 const Title = styled.h1`
@@ -32,6 +33,7 @@ const InputContainer = styled.div`
 const Input = styled.input`
     font-size: 1rem;
     border: none;
+    outline: none;
     flex: 8;
     padding-left: 1.25rem;
 `;
@@ -41,6 +43,7 @@ const Button = styled.button`
     border: none;
     ${mainColorBg};
     ${mainColorTextLight};
+    cursor: pointer;
 `;
 
 const Newsletter = () => {
