@@ -42,11 +42,34 @@ export const flexAllCenter = () => {
             justify-content: center;`;
 };
 
+export const flexWrap = () => {
+    return  `display: flex;
+            flex-wrap: wrap;
+            `;
+};
+
 /* === IMAGE  === */
 
 export const image = () => {
     return `width: 100%;
             height: 100%;
-            object-fit: cover;`;
+            object-fit: cover;
+            `;
 };
 
+/* === TEXT === */
+
+export const titleFontSize = () => {
+    return `font-size: 2rem;
+            font-weight: 400;
+`;
+};
+
+/* === BUTTONS === */
+
+export const button = () => {
+    return` border: none;
+            cursor: pointer;
+            border-radius: 1rem;
+            font-size: 1.2rem`;
+};
