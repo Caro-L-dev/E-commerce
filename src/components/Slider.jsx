@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import { sliderItems } from "../data";
 import { secondaryColorBgLight, flexAllCenter} from "../styles/mixins";
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
   width: 100%;
@@ -10,6 +11,7 @@ const Container = styled.div`
   display: flex;
   position: relative;
   overflow: hidden;
+  ${mobileDevice({ display: 'none'})};
 `;
 
 const Arrow = styled.div`

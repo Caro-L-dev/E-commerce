@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import { Badge } from "@material-ui/core";
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
-    height: 5rem;;
+    height: 5rem;
+    ${mobileDevice({ height: "3rem"})};
 `;
 
 const Wrapper = styled.div`
@@ -12,6 +14,8 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    ${mobileDevice({ padding: "0.5rem 1rem" })};
+    
 `
 
 const Left = styled.div`
@@ -23,6 +27,7 @@ const Left = styled.div`
 const Language = styled.span`
     font-size: 1rem;
     cursor: pointer;
+    ${mobileDevice({ display: "none" })};
 `;
 
 const SearchContainer = styled.div`
@@ -32,6 +37,7 @@ const SearchContainer = styled.div`
     align-items: center;
     border: 0.06rem solid lightgray;
     margin-left: 2rem;
+    ${mobileDevice({ marginLeft: "0" })};
 `;
 
 const Input = styled.input`
@@ -39,6 +45,7 @@ const Input = styled.input`
     flex:9;
     outline: none;
     font-size: 1.1rem;
+    ${mobileDevice({ fontSize: "0.8rem" , width: "50%" })};
 `;
 
 const Center = styled.div`
@@ -48,6 +55,7 @@ const Center = styled.div`
 
 const Logo = styled.h1`
     font-weight: bold;
+    ${mobileDevice({ fontSize: "1.5rem" })};
 `;
 
 const Right = styled.div`
@@ -55,12 +63,14 @@ const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    ${mobileDevice({ flex: 2 , justifyContent: "center" })};
 `;
 
 const MenuItem = styled.div`
     font-size: 1rem;
     cursor: pointer;
     margin-left: 1rem;
+    ${mobileDevice({ fontSize: "0.8rem", marginLeft: "0.4rem" })};
 `;
 
 const Navbar = () => {
@@ -70,8 +80,8 @@ const Navbar = () => {
         <Left>
             <Language>EN</Language>
             <SearchContainer>
-                <Input />
-                <Search style={{color:"gray", fontSize:"1rem", marginLeft:"1rem"}}/>
+                <Input placeholder="Search"/>
+                <Search style={{color:"gray", fontSize:"1rem"}}/>
             </SearchContainer>
         </Left>
         <Center><Logo>LOGO</Logo></Center>

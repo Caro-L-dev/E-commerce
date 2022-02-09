@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { image, mainColorTextLight, secondaryColorBgLight, secondaryColorTextMid } from "../styles/mixins";
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     flex:1;
@@ -10,6 +11,7 @@ const Container = styled.div`
 
 const Image = styled.img`
     ${image};
+    ${mobileDevice({ height: '40vh'})};
 `;
 
 const Info = styled.div`

@@ -1,9 +1,11 @@
 import { Facebook, Instagram, Twitter, Pinterest, Phone, MailOutline, Room } from '@material-ui/icons';
 import styled from 'styled-components';
 import { mainColorTextLight, flexAllCenter } from '../styles/mixins';
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     ${flexAllCenter};
+    ${mobileDevice({ flexDirection: 'column'})};
 `;
 
 
@@ -12,6 +14,7 @@ const Left = styled.div`
     display: flex;
     flex-direction: column;
     padding: 1.25rem;
+    ${mobileDevice({ display: 'none'})};
 `;
 
 const Logo = styled.h2``;
@@ -36,7 +39,9 @@ const SocialIcon = styled.div`
 
 const Center = styled.div`
     flex: 1;
+    width: 100%;
     padding: 1.25rem;
+    ${mobileDevice({ display: 'none'})};
 `;
 
 const Title = styled.h3`
@@ -57,8 +62,9 @@ const ListItem = styled.li`
 `;
 
 const Right = styled.div`
-    flex: 1;
+    flex: -1;
     padding: 1.25rem;
+    
 `;
 
 const ContactItem = styled.div`

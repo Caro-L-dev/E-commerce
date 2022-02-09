@@ -1,24 +1,26 @@
 import { Send } from '@material-ui/icons';
 import styled from 'styled-components';
 import { secondaryColorBgLight, flexAllCenter, mainColorBg, mainColorTextLight } from '../styles/mixins';
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     height: 60vh;
     ${secondaryColorBgLight};
     ${flexAllCenter};
     flex-direction: column;
-    padding: 5vh;
 `;
 
 const Title = styled.h1`
     font-size: 4.3rem;
     margin-bottom: 1.25rem;
+    ${mobileDevice({ fontSize: "3rem"})};
 `;
 
 const Description = styled.div`
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 1.25rem;
+    ${mobileDevice({ textAlign: 'center', fontSize: "0.8rem"})};
 `;
 
 const InputContainer = styled.div`
@@ -28,6 +30,7 @@ const InputContainer = styled.div`
     display: flex;
     justify-content: space-between;
     border: 0.06rem solid lightgray;
+    ${mobileDevice({ justifyContent: 'center', width: "80%", height: "20%"})};
 `;
 
 const Input = styled.input`
