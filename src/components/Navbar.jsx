@@ -6,7 +6,7 @@ import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     height: 5rem;
-    ${mobileDevice({ height: "3rem"})};
+    ${mobileDevice({ height: "3rem", maxWidth: "22.75rem"})};
 `;
 
 const Wrapper = styled.div`

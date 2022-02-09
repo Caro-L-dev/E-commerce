@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { mainColorBg, mainColorTextLight, flexAllCenter } from "../styles/mixins";
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
   height: 3rem; 
@@ -8,6 +9,7 @@ const Container = styled.div`
   ${flexAllCenter};
   font-size: 1rem;
   font-weight: 500;
+  ${mobileDevice({ marginLeft: '-1rem', maxWidth: '23.75rem'})};
 `;
 
 const Announcement = () => {

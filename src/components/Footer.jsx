@@ -5,7 +5,7 @@ import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     ${flexAllCenter};
-    ${mobileDevice({ flexDirection: 'column'})};
+    ${mobileDevice({ flexDirection: 'column', maxWidth: "23.75rem"})};
 `;
 
 

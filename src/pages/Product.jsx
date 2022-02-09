@@ -5,6 +5,7 @@ import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
 import { image, flexAllCenter, mainColorTextLight, mainColorBg, colorBgLight} from '../styles/mixins';
 import { Add, Remove } from '@material-ui/icons';
+import { mobileDevice } from "../responsive";
 
 
 const Container = styled.div``;
@@ -13,6 +14,7 @@ const Wrapper = styled.div`
     padding: 3rem;
     display: flex;
     font-size: 1.2rem;
+    ${mobileDevice({ padding: "0.8rem", flexDirection: "column"})};
 `;
 
 const ImgContainer = styled.div`
@@ -21,11 +23,13 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
     ${image};
+    ${mobileDevice({ height: "40vh"})};
 `;
 
 const InfoContainer = styled.div`
     flex: 1;
     padding: 0rem 3rem;
+    ${mobileDevice({ padding: "0.8rem"})};
 `;
 
 const Title = styled.h1`
@@ -47,6 +51,7 @@ const FilterContainer = styled.div`
     margin: 3rem 0rem;
     display: flex;
     justify-content: space-between;
+    ${mobileDevice({ width: '100%'})};
 `;
 
 const Filter = styled.div`
@@ -80,6 +85,7 @@ const AddContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobileDevice({ width: '100%'})};
 `;
 
 const AmountContainer = styled.div`

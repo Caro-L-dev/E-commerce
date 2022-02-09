@@ -4,11 +4,16 @@ import Announcement from '../components/Announcement';
 import Footer from '../components/Footer';
 import { button, flexAllCenter, mainColorTextLight, colorBgLight } from '../styles/mixins';
 import { Add, Remove } from '@material-ui/icons';
+import { mobileDevice } from "../responsive";
 
-const Container = styled.div``;
+const Container = styled.div`
+    box-sizing: border-box;
+    ${mobileDevice({maxWidth: "23.75rem"})};
+`;
 
 const Wrapper = styled.div`
     padding: 1.25rem;
+    ${mobileDevice({ padding: '0.8rem'})};
 `;
 
 const Title = styled.h1`
@@ -20,9 +25,11 @@ const Top = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    ${mobileDevice({ justifyContent: 'center'})};
 `;
 
 const TopTexts = styled.div`
+    ${mobileDevice({ display: 'none'})};
 `;
 
 const TopText = styled.span`
@@ -41,11 +48,13 @@ const TopButton = styled.button`
     background-color: ${props => props.type === "filled" ? "black" : "transparent"};
     color: ${props => props.type === "filled" && "white"};
     margin-bottom: 1.25rem;
+    ${mobileDevice({ fontSize: '60%', margin: '5%'})};
 `;
 
 const Bottom = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobileDevice({ flexDirection: 'column'})};
 `;
 
 
@@ -56,6 +65,7 @@ const Info = styled.div`
 const Product = styled.div`
     display: flex;
     justify-content: space-between;
+    ${mobileDevice({ flexDirection: 'column'})};
 `;
 
 const ProductDetail = styled.div`
@@ -102,11 +112,13 @@ const ProductAmountContainer = styled.div`
 const ProductAmount = styled.div`
     font-size: 1.2rem;
     margin: 1rem;
+    ${mobileDevice({ margin: '0.3rem 0.8rem'})};
 `;
 
 const ProductPrice = styled.div`
     font-size: 2.5rem;
     font-weight: 200;
+    ${mobileDevice({ marginBottom: '0.8rem'})};
 `;
 
 const Hr = styled.hr`
@@ -121,6 +133,7 @@ const Summary = styled.div`
     border-radius: 0.2rem;
     padding: 1.25rem;
     height: 50%;
+    ${mobileDevice({ width: '80%'})};
 `;
 
 const SummaryTitle = styled.h1`
