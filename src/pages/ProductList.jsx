@@ -4,6 +4,7 @@ import Announcement from '../components/Announcement';
 import Products from '../components/Products';
 import Newsletter from '../components/Newsletter';
 import Footer from '../components/Footer';
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div``;
 
@@ -13,22 +14,26 @@ const Title = styled.h2`
 
 const FilterContainer = styled.div`
   display:flex;
-  justify-content: space-between;  
+  justify-content: space-between;
+  ${mobileDevice({justifyContent: 'center'})};
 `;
 
 const Filter = styled.div`
     margin: 1.25rem;
+    ${mobileDevice({width: '0rem 1.25rem', display: 'flex', flexDirection: 'column'})};
 `;
 
 const FilterText = styled.span`
     font-size: 1.2rem;
     font-weight: 600;
     margin-right: 1.25rem;
+    ${mobileDevice({marginRight: '0rem'})};
 `;
 
 const Select = styled.select`
     padding: 0.6rem;
     margin-right: 1.25rem;
+    ${mobileDevice({margin: '0.8rem 0rem'})};
 `;
 
 const Option = styled.option``;

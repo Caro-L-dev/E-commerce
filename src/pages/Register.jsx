@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { flexAllCenter,button, colorBgLight, mainColorBg,flexWrap, mainColorTextLight, titleFontSize } from '../styles/mixins';
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     width: 100vw;
@@ -11,6 +12,7 @@ const Container = styled.div`
     url("https://images.pexels.com/photos/3802667/pexels-photo-3802667.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
     ${flexAllCenter};
     background-size: cover;
+    ${mobileDevice({fontSize: "0.8rem", height: "100%"})};
 `;
 
 
@@ -19,6 +21,7 @@ const Container = styled.div`
     padding: 1.25rem;
     ${colorBgLight};
     border-radius: 1rem;
+    ${mobileDevice({width: '75%', margin: '1rem'})};
  `;
 
 
@@ -37,11 +40,13 @@ const Container = styled.div`
     margin: 1.25rem 0.8rem 0rem 0rem;
     padding: 0.8rem;
     font-size: 1.2rem;
+    ${mobileDevice({fontSize: "0.8rem"})};
  `;
  
  const Agreement = styled.span`
     font-size: 1rem;
     margin: 1.25rem 0rem;
+    ${mobileDevice({fontSize: "0.8rem"})};
  `;
 
 

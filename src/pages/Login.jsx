@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { flexAllCenter, button, colorBgLight, mainColorBg, mainColorTextLight, titleFontSize } from '../styles/mixins';
+import { mobileDevice } from "../responsive";
 
 const Container = styled.div`
     width: 100vw;
@@ -19,6 +20,7 @@ const Container = styled.div`
     padding: 1.25rem;
     ${colorBgLight};
     border-radius: 1rem;
+    ${mobileDevice({width: '75%'})};
  `;
 
 
